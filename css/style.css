@@ -1,0 +1,115 @@
+html {
+  background-color: lightblue;
+}
+
+/*input {
+  visibility: hidden;
+}*/
+
+input[type=button].bigButt, input[type=submit]{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 8px 4px;
+  cursor: pointer;
+}
+
+input[type=button].bigButt2, input[type=submit]{
+  background-color: #DD7F50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 8px 4px;
+  cursor: pointer;
+}
+
+input[value=Remove], input[value="Remove 2nd Guardian"], input[value="Remove Other Documents"]{
+  background-color: #4C50AC !important;
+  border: none;
+  color: white;
+  padding: 4px 32px;
+  text-decoration: none;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+input[value="Add 2nd Guardian"]{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 4px 32px;
+  text-decoration: none;
+  margin: 4px 4px;
+  cursor: pointer;
+  
+}
+
+.imgpaste {
+  border: dotted 6px #666;
+  min-height: 200px;
+  min-width: 200px;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 700ms all;
+  position: relative;
+	background-color: lightblue;
+  background-repeat: no-repeat;
+}
+
+.grid3{
+  grid-column-start: 3;
+}
+
+.splitDiv {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+}
+
+textarea {
+  background-color: white;
+}
+.active {
+  border: solid 6px #2C3;
+  background-repeat: no-repeat;
+  width: auto !important;
+}
+
+.pasted {
+  background-color: #FFF;
+  width: auto !important;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.menu{
+  grid-column-start: 1;
+}
+
+.reset{
+  grid-column-start: 2;
+}
+
+h3 {
+  padding-top: 20px;
+}
+
+h4 {
+  padding-top: 10px;
+}
+
+@media print {
+  input {
+    visibility:hidden;
+  }
+  
+  .splitDiv {
+    display: block;
+  }
+}
