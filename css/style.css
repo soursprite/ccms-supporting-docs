@@ -50,6 +50,7 @@ input[value="Add 2nd Guardian"]{
 .imgpaste {
   border: dotted 6px #666;
   min-height: 200px;
+  max-height: 200px;
   min-width: 200px;
   margin-top: 5px;
   border-radius: 5px;
@@ -58,6 +59,7 @@ input[value="Add 2nd Guardian"]{
   position: relative;
 	background-color: lightblue;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 .grid3{
@@ -76,11 +78,14 @@ textarea {
   border: solid 6px #2C3;
   background-repeat: no-repeat;
   width: auto !important;
+  overflow: visible;
+  z-index: 5;
 }
 
 .pasted {
   background-color: #FFF;
   width: auto !important;
+  /*overflow: hidden;*/
 }
 
 .menu {
