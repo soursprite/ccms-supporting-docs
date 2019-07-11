@@ -1,8 +1,11 @@
-//CCRS Family Info template
+//CCRS Family Info template 1.1
 //by James
 
 //for the purposes of generating guided pages for CCRS image upload
 //generates blank boxes to paste in images based on number of SSNs
+
+//Divs stay min size until active
+//divs can be deselected by clicking again
 //-----------------------------
 
 //SSN input
@@ -350,12 +353,12 @@ $("html").pasteImageReader(function(results) {
 	$data.text(dataURL);
 	$size.val(results.file.size);
 	$type.val(results.file.type);
-	var img = document.createElement("img");
-	img.src = dataURL;
-	var w = img.width;
-	var h = img.height;
-	$width.val(w);
-	$height.val(h);
+	//var img = document.createElement("img");
+	//img.src = dataURL;
+	//var w = img.width;
+	//var h = img.height;
+	//$width.val(w);
+	//$height.val(h);
   
   $(".active").addClass("pasted");
   $(".active").empty();
@@ -363,7 +366,7 @@ $("html").pasteImageReader(function(results) {
 		/*.css({
 			backgroundImage: "url(" + dataURL + ")"
 		})*/
-		.data({ width: w, height: h });
+		//.data({ width: w, height: h });
 });
 
 var $data, $size, $type, $width, $height;
@@ -375,18 +378,22 @@ $(function() {
 	$height = $("#height");
 	$(document).on("click", ".imgpaste", function() {
 		var $this = $(this);
-		var bi = $this.css("background-image");
-		if (bi != "none") {
-			$data.text(bi.substr(4, bi.length - 6));
-		}
-
-		$(".active").removeClass("active"); //unactivates
-		$this.addClass("active"); //activates current div
-
+		//var bi = $this.css("background-image");
+		//if (bi != "none") {
+		//	$data.text(bi.substr(4, bi.length - 6));
+		//}
+    //$(".active").css({ overflow: hidden });
+    if ($this.hasClass("active")) {
+      $(".active").removeClass("active");
+    }
+    else {
+      $(".active").removeClass("active"); //unactivates
+      $this.addClass("active"); //activates current div
+    }
 		$width.val($this.data("width"));
 		$height.val($this.data("height"));
 
-		$this.css({ width: "", height: "", "z-index": "" });
+		$this.css({ overflow:visible, width: "",height: "" });
 
 	});
 });
